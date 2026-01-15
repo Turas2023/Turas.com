@@ -52,14 +52,18 @@ a:hover{ text-decoration: underline; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 14px 0;
+  padding: 20px 0;
   gap: 16px;
+  min-height: 100px;
 }
 .brand{ display:flex; align-items:center; gap: 12px; }
 .brand-logo{
-  height: clamp(48px, 5vw, 72px);
+  height: clamp(80px, 12vw, 180px);
   width: auto;
   display:block;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 .nav-links{
   display:flex;
@@ -265,7 +269,14 @@ input:focus, textarea:focus{ outline: 2px solid rgba(184,161,90,0.35); border-co
   justify-content:space-between;
   gap: 18px;
 }
-.footer-logo{ height: clamp(40px, 4vw, 60px); width:auto; display:block; }
+.footer-logo{ 
+  height: clamp(80px, 12vw, 180px); 
+  width:auto; 
+  display:block; 
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
 .footer-right{ display:flex; gap: 14px; }
 .muted{ color: var(--soft-gray); }
 
