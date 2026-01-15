@@ -57,7 +57,7 @@ a:hover{ text-decoration: underline; }
 }
 .brand{ display:flex; align-items:center; gap: 12px; }
 .brand-logo{
-  height: 44px;
+  height: clamp(48px, 5vw, 72px);
   width: auto;
   display:block;
 }
@@ -103,7 +103,15 @@ a:hover{ text-decoration: underline; }
   gap: 34px;
   align-items:center;
 }
-.hero-media{ display:flex; justify-content:center; }
+.hero-media{ display:flex; justify-content:center; align-items:center; }
+.hero-image{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  display:block;
+}
 .image-placeholder{
   width: 100%;
   max-width: 420px;
@@ -257,7 +265,7 @@ input:focus, textarea:focus{ outline: 2px solid rgba(184,161,90,0.35); border-co
   justify-content:space-between;
   gap: 18px;
 }
-.footer-logo{ height: 38px; width:auto; display:block; }
+.footer-logo{ height: clamp(40px, 4vw, 60px); width:auto; display:block; }
 .footer-right{ display:flex; gap: 14px; }
 .muted{ color: var(--soft-gray); }
 
